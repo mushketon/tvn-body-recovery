@@ -34,25 +34,61 @@
     <loc>https://mushketon.github.io/tvn-body-recovery/services/visceral-massage/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mushketon.github.io/tvn-body-recovery/services/back-massage/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mushketon.github.io/tvn-body-recovery/services/neck-collar-massage/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mushketon.github.io/tvn-body-recovery/blog/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mushketon.github.io/tvn-body-recovery/blog/chto-takoe-miofascialnyy-massazh/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://mushketon.github.io/tvn-body-recovery/blog/kak-prohodit-pervoe-poseschenie/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://mushketon.github.io/tvn-body-recovery/blog/limfodrenazhnyy-massazh/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://mushketon.github.io/tvn-body-recovery/blog/kak-podgotovitsya-k-massazhu/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://mushketon.github.io/tvn-body-recovery/blog/chto-delat-posle-massazha/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://mushketon.github.io/tvn-body-recovery/blog/vosstanovlenie-posle-trenirovki/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
   </url>
   <url>
     <loc>https://mushketon.github.io/tvn-body-recovery/contacts/</loc>
@@ -63,13 +99,19 @@
   <url>
     <loc>https://mushketon.github.io/tvn-body-recovery/privacy/</loc>
     <lastmod>2026-07-05</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://mushketon.github.io/tvn-body-recovery/terms/</loc>
     <lastmod>2026-07-05</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://mushketon.github.io/tvn-body-recovery/consent/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
 </urlset>
