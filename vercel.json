@@ -1,9 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
   "builds": [
     {
       "src": "**/*",
       "use": "@vercel/static"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/tvn-body-recovery/(.*)",
+      "destination": "/$1"
     }
   ]
 }
