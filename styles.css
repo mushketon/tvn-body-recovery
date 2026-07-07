@@ -413,6 +413,7 @@ summary {
 
 .mobile-socials {
   display: flex;
+  align-items: center;
   gap: 10px;
   padding: 14px 20px;
   border-bottom: 1px solid rgba(39, 70, 63, 0.08);
@@ -420,6 +421,8 @@ summary {
 
 .mobile-socials .social-icon {
   display: inline-grid;
+  place-items: center;
+  flex: 0 0 44px;
   background: rgba(255, 255, 255, 0.72);
 }
 
@@ -1525,14 +1528,14 @@ summary {
   }
 
   .header-actions {
-    gap: 8px;
+    gap: 6px;
   }
 
   .header-phone {
-    max-width: 92px;
-    overflow: hidden;
+    max-width: none;
+    overflow: visible;
     font-size: 0.86rem;
-    text-overflow: ellipsis;
+    text-overflow: clip;
   }
 
   .header-cta {
