@@ -1,1 +1,5 @@
 .vercel
+.codex_publish_key
+.codex_publish_key.pub
+.playwright-mcp/
+home-check.png

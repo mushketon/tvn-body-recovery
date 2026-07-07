@@ -1209,10 +1209,11 @@ summary {
 }
 
 .contact-panel {
-  grid-template-columns: minmax(0, 1fr) auto;
-  padding: 30px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+  gap: 32px;
+  padding: 36px;
   border-radius: 24px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .contact-brand {
@@ -1221,20 +1222,27 @@ summary {
 
 .contact-actions-grid {
   display: grid;
-  min-width: 280px;
+  min-width: 320px;
+  gap: 12px;
+  align-content: start;
 }
 
-.icon-link {
+.icon-link,
+.contact-phone,
+.stacked-contact-link {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 12px;
-  min-height: 52px;
-  padding: 0 14px;
+  width: 100%;
+  min-height: 56px;
+  padding: 0 18px;
   border-radius: 18px;
   color: var(--emerald-deep);
-  background: rgba(255, 255, 255, 0.56);
-  border: 1px solid rgba(39, 70, 63, 0.12);
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(39, 70, 63, 0.16);
   font-weight: 700;
+  font-size: 1rem;
   transition:
     transform 180ms ease,
     background-color 180ms ease,
@@ -1242,13 +1250,19 @@ summary {
 }
 
 .icon-link:hover,
-.icon-link:focus-visible {
+.icon-link:focus-visible,
+.contact-phone:hover,
+.contact-phone:focus-visible,
+.stacked-contact-link:hover,
+.stacked-contact-link:focus-visible {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.88);
-  border-color: rgba(39, 70, 63, 0.26);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(39, 70, 63, 0.28);
 }
 
-.icon-link svg {
+.icon-link svg,
+.contact-phone svg,
+.stacked-contact-link svg {
   width: 24px;
   height: 24px;
   fill: none;
@@ -1259,10 +1273,19 @@ summary {
 }
 
 .contact-phone {
-  display: inline-flex;
-  margin-top: 8px;
-  font-size: 1.2rem;
-  font-weight: 700;
+  margin-top: 0;
+}
+
+.stacked-contact-link {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.stacked-contact-link:hover,
+.stacked-contact-link:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.32);
 }
 
 .service-hero-grid {
@@ -1327,6 +1350,7 @@ summary {
   display: grid;
   gap: 12px;
   margin-top: 24px;
+  width: 100%;
 }
 
 .site-footer {
@@ -1392,8 +1416,8 @@ summary {
 
 .cta-panel {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 28px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+  gap: 32px;
   align-items: center;
   padding: 40px;
   border-radius: 32px;
@@ -1708,8 +1732,28 @@ summary {
     min-height: auto;
   }
 
-  .home-main .services-catalog .service-card:nth-child(n + 4) {
+  .services-catalog.is-mobile-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(100%, 1fr);
+    grid-template-columns: none;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 4px 2px 8px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .services-catalog.is-mobile-carousel::-webkit-scrollbar {
     display: none;
+  }
+
+  .services-catalog.is-mobile-carousel .services-carousel-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    scroll-snap-align: start;
   }
 
   .home-main .seo-grid .blog-card:nth-child(n + 3) {
