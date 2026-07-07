@@ -581,35 +581,38 @@ summary {
   margin-top: 32px;
 }
 
-.contact-hero-actions {
+.contact-hero-stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
   margin-top: 28px;
 }
 
-.contact-channel {
+.contact-callout {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  min-height: 56px;
+  min-height: 58px;
   padding: 0 18px;
-  border-radius: 18px;
-  border: 1px solid transparent;
+  border-radius: 999px;
   color: var(--white);
+  background: linear-gradient(135deg, #21463f 0%, #3d6c61 100%);
+  box-shadow: 0 18px 36px rgba(11, 37, 33, 0.18);
   font-weight: 700;
-  box-shadow: 0 18px 36px rgba(11, 37, 33, 0.16);
+  letter-spacing: 0.01em;
   transition:
     transform 180ms ease,
-    box-shadow 180ms ease,
-    filter 180ms ease;
+    box-shadow 180ms ease;
 }
 
-.contact-channel:hover,
-.contact-channel:focus-visible {
+.contact-callout:hover,
+.contact-callout:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 22px 40px rgba(11, 37, 33, 0.22);
-  filter: saturate(1.06);
 }
 
-.contact-channel svg {
+.contact-callout svg {
   width: 22px;
   height: 22px;
   fill: none;
@@ -620,20 +623,22 @@ summary {
   flex: 0 0 auto;
 }
 
-.contact-channel-whatsapp {
-  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+.contact-hero-socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(39, 70, 63, 0.1);
+  box-shadow: 0 14px 32px rgba(11, 37, 33, 0.08);
 }
 
-.contact-channel-phone {
-  background: linear-gradient(135deg, #21463f 0%, #3d6c61 100%);
-}
-
-.contact-channel-telegram {
-  background: linear-gradient(135deg, #2aabee 0%, #229ed9 100%);
-}
-
-.contact-channel-instagram {
-  background: linear-gradient(135deg, #fdf497 0%, #fd5949 30%, #d6249f 65%, #285aeb 100%);
+.contact-hero-socials .social-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(39, 70, 63, 0.08);
 }
 
 .hero-points {
@@ -1574,8 +1579,16 @@ summary {
     margin-top: 24px;
   }
 
-  .contact-channel {
-    width: 100%;
+  .contact-hero-stack {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-callout {
+    justify-content: center;
+  }
+
+  .contact-hero-socials {
     justify-content: center;
   }
 
