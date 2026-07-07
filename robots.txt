@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mushketon.github.io/tvn-body-recovery/sitemap.xml
+Sitemap: https://tvn-body-recovery.vercel.app/sitemap.xml
