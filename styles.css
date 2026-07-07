@@ -901,6 +901,21 @@ summary {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.section-reviews {
+  position: relative;
+}
+
+.section-reviews::before {
+  content: "";
+  position: absolute;
+  inset: 22px 0;
+  background:
+    linear-gradient(180deg, rgba(248, 245, 239, 0.86), rgba(238, 231, 220, 0.74)),
+    radial-gradient(circle at top right, rgba(200, 169, 106, 0.08), transparent 26%);
+  pointer-events: none;
+  z-index: -1;
+}
+
 .trust-card,
 .review-card {
   display: grid;
@@ -915,8 +930,7 @@ summary {
   backdrop-filter: blur(14px);
 }
 
-.trust-card span,
-.review-card span {
+.trust-card > span {
   color: var(--gold-readable);
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -934,6 +948,74 @@ summary {
 .trust-card p,
 .review-card p {
   margin: 0;
+}
+
+.review-card {
+  gap: 18px;
+  min-height: 100%;
+  padding: 26px;
+  border-radius: 26px;
+  background: rgba(255, 252, 246, 0.92);
+}
+
+.review-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.review-name {
+  margin: 0;
+  color: var(--emerald-deep);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  line-height: 0.95;
+}
+
+.review-city {
+  margin: 6px 0 0;
+  color: rgba(47, 47, 47, 0.62);
+  font-size: 0.95rem;
+}
+
+.review-rating-wrap {
+  display: grid;
+  justify-items: end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.review-rating {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(15, 61, 52, 0.08);
+  color: var(--emerald-deep);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.review-stars {
+  display: inline-flex;
+  gap: 3px;
+  color: rgba(200, 169, 106, 0.28);
+  font-size: 0.92rem;
+  line-height: 1;
+}
+
+.review-star.is-filled {
+  color: var(--gold);
+}
+
+.review-text {
+  color: rgba(43, 43, 43, 0.82);
+  font-size: 0.98rem;
+  line-height: 1.72;
 }
 
 .benefit-card strong {
@@ -1341,10 +1423,13 @@ summary {
   .benefits,
   .blog-grid,
   .trust-grid,
-  .reviews-grid,
   .related-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .intro-meta {
@@ -1548,10 +1633,48 @@ summary {
     border-radius: 18px;
   }
 
-  .trust-grid,
-  .reviews-grid {
+  .trust-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(88%, 1fr);
+    grid-template-columns: none;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 4px 2px 8px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .reviews-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .review-card {
+    scroll-snap-align: start;
+    min-height: 100%;
+    padding: 20px 18px;
+    border-radius: 22px;
+  }
+
+  .review-card-top {
+    gap: 14px;
+  }
+
+  .review-name {
+    font-size: 1.6rem;
+  }
+
+  .review-rating {
+    min-width: 52px;
+    min-height: 36px;
+    padding: 0 12px;
+    font-size: 0.94rem;
   }
 
   .trust-card h3 {
@@ -1559,13 +1682,20 @@ summary {
   }
 
   .trust-card p,
-  .review-card p,
   .blog-card p {
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     line-clamp: 2;
+  }
+
+  .review-text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
   }
 
   .faq-item {

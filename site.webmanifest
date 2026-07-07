@@ -2,19 +2,19 @@
   "name": "TVN Body Recovery",
   "short_name": "TVN",
   "description": "Персональная практика работы с телом в Алматы.",
-  "start_url": "/tvn-body-recovery/",
-  "scope": "/tvn-body-recovery/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#f8f5ef",
   "theme_color": "#0f3d34",
   "icons": [
     {
-      "src": "/tvn-body-recovery/assets/images/favicon-32.png",
+      "src": "/assets/images/favicon-32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/tvn-body-recovery/assets/images/apple-touch-icon.png",
+      "src": "/assets/images/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     }

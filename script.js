@@ -4,6 +4,86 @@ if (yearNode) {
   yearNode.textContent = new Date().getFullYear().toString();
 }
 
+const reviews = [
+  {
+    name: "Алина",
+    city: "Алматы",
+    rating: 5.0,
+    text:
+      "Очень спокойный и внимательный формат. После встречи ушло ощущение зажатости в плечах, а рекомендации помогли лучше распределять нагрузку в течение недели."
+  },
+  {
+    name: "Дамир",
+    city: "Алматы",
+    rating: 4.9,
+    text:
+      "Понравилось, что здесь нет спешки и лишних обещаний. Все объясняется понятным языком, а работа ощущается точной и собранной."
+  },
+  {
+    name: "Мария",
+    city: "Астана",
+    rating: 4.8,
+    text:
+      "Пришла с общей усталостью после тренировочного периода. После сеанса стало легче двигаться, а тело ощущалось более собранным и свободным."
+  },
+  {
+    name: "Руслан",
+    city: "Алматы",
+    rating: 4.7,
+    text:
+      "Для меня было важно индивидуальное внимание. Никита спокойно выслушал запрос, ничего не навязывал и подобрал комфортный темп работы."
+  },
+  {
+    name: "Екатерина",
+    city: "Алматы",
+    rating: 5.0,
+    text:
+      "Очень аккуратная работа и приятная атмосфера. Особенно ценно, что после встречи остались понятные рекомендации, которые реально легко внедрить."
+  },
+  {
+    name: "Тимур",
+    city: "Караганда",
+    rating: 4.9,
+    text:
+      "После долгой дороги и плотного графика хотелось просто вернуть ощущение легкости. Встреча помогла выдохнуть, разгрузиться и почувствовать больше комфорта в теле."
+  }
+];
+
+const reviewsGrid = document.querySelector("[data-reviews-grid]");
+
+const renderStars = (rating) => {
+  const rounded = Math.round(rating);
+
+  return Array.from({ length: 5 }, (_, index) =>
+    `<span class="review-star${index < rounded ? " is-filled" : ""}" aria-hidden="true">★</span>`
+  ).join("");
+};
+
+const renderReviews = () => {
+  if (!reviewsGrid) return;
+
+  reviewsGrid.innerHTML = reviews
+    .map(
+      (review, index) => `
+        <article class="review-card reveal${index % 3 === 1 ? " delay-1" : ""}${index % 3 === 2 ? " delay-2" : ""}">
+          <div class="review-card-top">
+            <div>
+              <h3 class="review-name">${review.name}</h3>
+              <p class="review-city">${review.city}</p>
+            </div>
+            <div class="review-rating-wrap" aria-label="Рейтинг ${review.rating.toFixed(1)} из 5">
+              <strong class="review-rating">${review.rating.toFixed(1)}</strong>
+              <div class="review-stars">${renderStars(review.rating)}</div>
+            </div>
+          </div>
+          <p class="review-text">${review.text}</p>
+        </article>`
+    )
+    .join("");
+};
+
+renderReviews();
+
 const revealNodes = document.querySelectorAll(".reveal");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector("[data-mobile-menu]");
@@ -20,13 +100,13 @@ const socialLinks = [
   },
   {
     label: "Telegram",
-    href: "https://t.me/MushketonX",
+    href: "https://t.me/+9gfBf-mJgD02ZDky",
     icon:
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 4.2 18.3 19c-.2 1-.8 1.2-1.6.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-.9.5l.3-4.9 8.9-8c.4-.4-.1-.6-.6-.3L6.3 12.7 1.6 11.2c-1-.3-1-1 .2-1.5l18.4-7.1c.9-.3 1.7.2 1.3 1.6Z"/></svg>'
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/_mushketonx_?igsh=NDNieTMxMm44eWhn",
+    href: "https://www.instagram.com/tvn_body.recovery?igsh=MW9yMmFsZzNxNWdnbQ==",
     icon:
       '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="3.4" width="17.2" height="17.2" rx="5"/><circle cx="12" cy="12" r="3.7"/><circle cx="17.2" cy="6.9" r=".8"/></svg>'
   }
